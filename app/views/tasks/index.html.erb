@@ -2,7 +2,9 @@
 
 <% @tasks.each do |task| %>
   
-  <h3> <%= link_to task.title, task_path(task) %> </h3>
+  <h3><%= link_to task.title, task_path(task) %></h3>
   <p><%= task.details %></p>
   <p><%= task.completed %></p>
 <% end %>
+
+ <%= button_to "Create new task", new_task_path, method: 'get' %>
